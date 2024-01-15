@@ -1,3 +1,19 @@
+<?php
+
+/**
+ * Movie
+ */
+class Movie
+{
+  public $title;
+  public $year;
+  public $director;
+  public $genre;
+  public $language;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
