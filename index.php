@@ -5,12 +5,12 @@
  */
 class Movie
 {
-  public $title;
+  public string $title;
   public $year;
-  public $director;
-  public $genre;
-  public $language;
-  
+  public string $director;
+  public string $genre;
+  public string $language;
+
   /**
    * __construct
    *
@@ -26,6 +26,21 @@ class Movie
     $this->director = $_director;
     $this->genre = $_genre;
     $this->language = $_language;
+  }
+  
+  /**
+   * setYear
+   *
+   * @param  mixed $_year
+   * @return void
+   */
+  public function setYear($_year)
+  {
+    if ($_year <= 2024) {
+      $this->year = $_year;
+    } elseif ($_year > 2024) {
+      $this->year = "Upcoming";
+    }
   }
 }
 
