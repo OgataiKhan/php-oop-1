@@ -65,6 +65,9 @@ $wonka = new Movie('Wonka', 'Paul King', ['Fantasy', 'Musical', 'Comedy', 'Adven
 // Setting release years
 $rebel_moon->setYear(2023);
 $wonka->setYear(2023);
+
+// Storing movies in an array
+$movies = array($rebel_moon, $wonka);
 ?>
 
 <!DOCTYPE html>
@@ -77,12 +80,13 @@ $wonka->setYear(2023);
 </head>
 
 <body>
-  <div>
-    <?php $rebel_moon->displayProperties(); ?>
-  </div>
-  <div>
-    <?php $wonka->displayProperties(); ?>
-  </div>
+  <?php
+  foreach ($movies as $movie) {
+    echo "<div>";
+    $movie->displayProperties();
+    echo "</div>";
+  }
+  ?>
 </body>
 
 </html>
