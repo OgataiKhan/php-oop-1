@@ -5,11 +5,11 @@
  */
 class Movie
 {
-  public string $title;
+  public $title;
   public $year;
-  public string $director;
-  public string $genre;
-  public string $language;
+  public $director;
+  public $genre;
+  public $language;
 
   /**
    * __construct
@@ -17,10 +17,10 @@ class Movie
    * @return void
    */
   function __construct(
-    $_title,
-    $_director,
-    $_genre,
-    $_language
+    string $_title,
+    string $_director,
+    array $_genre,
+    string $_language
   ) {
     $this->title = $_title;
     $this->director = $_director;
@@ -34,11 +34,11 @@ class Movie
    * @param  mixed $_year
    * @return void
    */
-  public function setYear($_year)
+  public function setYear(int $_year)
   {
     if ($_year <= 2024) {
       $this->year = $_year;
-    } elseif ($_year > 2024) {
+    } else {
       $this->year = "Upcoming";
     }
   }
@@ -53,14 +53,14 @@ class Movie
     echo "<h2>$this->title</h2>";
     echo "<p>Release Year: $this->year</p>";
     echo "<p>Director: $this->director</p>";
-    echo "<p>Genre: $this->genre</p>";
+    echo "<p>Genre: " . implode(", ", $this->genre) . "</p>";
     echo "<p>Language: $this->language</p>";
   }
 }
 
 // Creating movie instances
-$rebel_moon = new Movie('Rebel Moon', 'Zack Snyder', 'Science Fiction', 'English');
-$wonka = new Movie('Wonka', 'Paul King', 'Fantasy', 'English');
+$rebel_moon = new Movie('Rebel Moon', 'Zack Snyder', ['Science Fiction', 'Action', 'Adventure', 'Drama'], 'English');
+$wonka = new Movie('Wonka', 'Paul King', ['Fantasy', 'Musical', 'Comedy', 'Adventure'], 'English');
 
 // Setting release years
 $rebel_moon->setYear(2023);
