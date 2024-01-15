@@ -27,7 +27,7 @@ class Movie
     $this->genre = $_genre;
     $this->language = $_language;
   }
-  
+
   /**
    * setYear
    *
@@ -42,8 +42,29 @@ class Movie
       $this->year = "Upcoming";
     }
   }
+
+  /**
+   * displayProperties
+   *
+   * @return void
+   */
+  public function displayProperties()
+  {
+    echo "<h2>$this->title</h2>";
+    echo "<p>Release Year: $this->year</p>";
+    echo "<p>Director: $this->director</p>";
+    echo "<p>Genre: $this->genre</p>";
+    echo "<p>Language: $this->language</p>";
+  }
 }
 
+// Creating movie instances
+$rebel_moon = new Movie('Rebel Moon', 'Zack Snyder', 'Science Fiction', 'English');
+$wonka = new Movie('Wonka', 'Paul King', 'Fantasy', 'English');
+
+// Setting release years
+$rebel_moon->setYear(2023);
+$wonka->setYear(2023);
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +77,12 @@ class Movie
 </head>
 
 <body>
-
+  <div>
+    <?php $rebel_moon->displayProperties(); ?>
+  </div>
+  <div>
+    <?php $wonka->displayProperties(); ?>
+  </div>
 </body>
 
 </html>
