@@ -20,6 +20,6 @@ body {
 }
 
 .card {
-  background-color: #808080;
+  background: linear-gradient(170deg, rgba(128,128,128,1) 0%, rgba(79,85,91,1) 100%);
   color: white;
 }
