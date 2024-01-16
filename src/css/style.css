@@ -16,10 +16,10 @@ MAIN
 */
 
 body {
-  background-color: #000000;
+  background-color: #2F2D2E;
 }
 
 .card {
-  background: linear-gradient(170deg, rgba(128,128,128,1) 0%, rgba(79,85,91,1) 100%);
-  color: white;
+  background-color: #F0EFF4;
+  color: #2A3439;
 }
