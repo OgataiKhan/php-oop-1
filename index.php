@@ -20,14 +20,8 @@ require_once __DIR__ . '/src/db.php';
 
 <body>
   <?php
-  include __DIR__ . '/_partials/header.php';
-  ?>
-  <?php
-  foreach ($movies as $movie) {
-    echo "<div>";
-    $movie->displayProperties();
-    echo "</div>";
-  }
+  include_once __DIR__ . '/_partials/header.php';
+  include_once __DIR__ . '/_partials/main.php';
   ?>
 </body>
 

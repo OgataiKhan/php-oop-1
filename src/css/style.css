@@ -1,10 +1,25 @@
 /*
 *********
-RESET
+HEADER
 *********
 */
 
 header {
   background-color: #E50914;
   color: #FFFFFF;
+}
+
+/*
+*********
+MAIN
+*********
+*/
+
+body {
+  background-color: #000000;
+}
+
+.card {
+  background-color: #808080;
+  color: white;
 }
