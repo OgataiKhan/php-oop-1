@@ -18,11 +18,13 @@ class Movie
    */
   function __construct(
     string $_title,
+    int $_year,
     string $_director,
     array $_genre,
     string $_language
   ) {
     $this->title = $_title;
+    $this->setYear($_year);
     $this->director = $_director;
     $this->genre = $_genre;
     $this->language = $_language;
