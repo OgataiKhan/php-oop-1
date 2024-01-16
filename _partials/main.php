@@ -1,6 +1,6 @@
 <main class="py-4">
   <div class="container">
-    <ul class="d-flex justify-content-center">
+    <ul class="d-flex justify-content-center flex-wrap">
       <?php
       foreach ($movies as $movie) {
         echo "<div>";

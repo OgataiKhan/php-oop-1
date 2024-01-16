@@ -61,7 +61,7 @@ class Movie
 
   public function displayProperties()
   {
-    echo "<li class=\"card shadow mx-2\" style=\"width: 18rem;\">
+    echo "<li class=\"card shadow m-2\" style=\"width: 18rem;\">
     <div class=\"card-body\">
       <h5 class=\"card-title\">$this->title</h5>
       <h6 class=\"card-subtitle mb-2 text-body-secondary\">$this->year</h6>
