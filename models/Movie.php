@@ -5,11 +5,11 @@
  */
 class Movie
 {
-  public $title;
-  public $year;
-  public $director;
-  public $genre;
-  public $language;
+  private $title;
+  private $year;
+  private $director;
+  private $genre;
+  private $language;
 
   /**
    * __construct
